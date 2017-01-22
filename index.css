@@ -1,0 +1,13 @@
+.tcss{
+	margin-left: 250px;
+	position:relative;
+	top:50px;
+}
+thead{
+	background-color: #D3D3D3;
+}
+body{
+	background-image: url("foodimg.jpeg");
+	background-size: 1350px 860px;
+	background-repeat: no-repeat;
+}

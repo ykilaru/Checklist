@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>angular application</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+      <link rel="stylesheet" href="index.css">
+      <script src="index.js" type="text/javascript" charset="utf-8"></script>
+   </head>
+   <body>
+      <div class="container tcss">
+         <div ng-app="myApp" ng-controller="foodCtrl">
+            <div class="row">
+               <div class="col-lg-4">
+                  <h1>Add Food Items</h1>
+                  <div class="input-group">
+                     <input type="text" placeholder="Enter Item to add..." class="form-control" ng-model="addFood" >
+                     <span class="input-group-btn">
+                     <button class="btn btn-success" type="submit" ng-click="addItem()">Add</button>
+                     </span>
+                  </div>
+               </div>
+            </div>
+            <br>
+            <div class="row">
+               <div class="col-lg-4">
+                  <table class="table table-bordered text-center">
+                     <thead>
+                        <tr>
+                           <th class="text-center">Check List</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr ng-repeat="x in items">
+                           <td>{{x}}</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-lg-4">
+                  <h1>Delete Food Items</h1>
+                  <div class="input-group">
+                     <input type="text" placeholder="Enter Item to delete..." class="form-control" ng-model="deleteFood">
+                     <span class="input-group-btn">
+                     <button class="btn btn-danger" type="submit" ng-click="deleteItem()">Delete</button>
+                     </span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
